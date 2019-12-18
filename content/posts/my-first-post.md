@@ -8,7 +8,7 @@ draft: true
 블로그 열심히 쓰겠습니다!
 ---
 
-Typescript 부터 출발!!
+Typescript 부터 출발합니다.
 ---
 
 [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
@@ -27,7 +27,7 @@ Compile
 ```
 tsc helloworld.ts
 ```
-컴파일 명령어는 tsc이네용
+컴파일 명령어는 tsc 이네요.
 
 ---
 
@@ -42,7 +42,7 @@ let user = "Jane User";
 // document.body.textContext = greeter(user);
 console.log(greeter(user));
 ```
-가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네용
+가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.
 
 터미널 환경에서 "tsc greeter.ts" "node greeter.js" 와 같은 식으로 테스트 해볼 수 있습니다.
  
@@ -58,7 +58,7 @@ let user = [0, 1, 2];
 
 console.log(greeter(user));
 ```
-: 뒤에 타입을 선언하네용, string 타입이 아니므로 컴파일 에러가 발생합니다.
+: 뒤에 타입을 선언하네요, string 타입이 아니므로 컴파일 에러가 발생합니다.
 
 ---
 
@@ -77,7 +77,7 @@ let user = { firstName: "Jane", lastName: "User" };
 
 console.log(greeter(user));
 ```
-와우, 인터페이스를 구현할 수 있습니다!!!
+와우, 인터페이스도 구현할 수 있습니다!
 
 ---
 
@@ -107,7 +107,7 @@ let user = new Student("Jane", "M.", "User");
 
 console.log(greeter(user));
 ```
-클래스로도 만들어집니당!
+클래스로도 만들어집니다!
 
 ---
 
@@ -123,7 +123,7 @@ greeter.html
 	</body>
 </html>
 ```
-Html 파일로 한 번 출력해볼까용
+Html 파일로 한 번 출력해볼까요.
 
 ---
 
@@ -155,4 +155,4 @@ greeter함수는 Student타입을 받아서 document에 출력합니다.
 
 ---
 
-읽어주셔서 행복합니당
+읽어주셔서 행복합니다 :)
