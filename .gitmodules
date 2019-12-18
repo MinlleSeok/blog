@@ -1,7 +1,0 @@
-[submodule "themes/github-style"]
-	path = themes/github-style
-	url = https://github.com/MinlleSeok/github-style.git
-[submodule "public/public"]
-	path = public/public
-	url = git@github.com:MinlleSeok/minlleseok.github.io.git
-	branch = master
