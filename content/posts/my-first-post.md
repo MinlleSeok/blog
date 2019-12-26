@@ -1,7 +1,6 @@
 ---
 title: "행복 기술 블로그 시작! TypeScript"
 date: 2019-12-18T21:34:00+09:00
-draft: true
 ---
 
 ---

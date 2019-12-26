@@ -1,7 +1,7 @@
 ---
 title: "DB 정규화"
 date: 2019-12-19T21:10:08+09:00
-draft: true
+categories: ["database"]
 ---
 
 ---
