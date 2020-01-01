@@ -3,9 +3,9 @@ title: "First"
 date: 2019-12-30T22:27:58+09:00
 ---
 
-# Go ¾ğ¾î ¹è¿ì±â (Write in "Go")
+# Go ì–¸ì–´ ë°°ìš°ê¸° (Write in "Go")
 
-### ¾È³ç, °í (Hello, Go)
+### ì•ˆë…•, ê³  (Hello, Go)
 
 ```go
 package main
@@ -17,17 +17,17 @@ func main() {
 }
 ```
 
-### Go ¾ğ¾î ¼³Ä¡ (Install Go Language)
+### Go ì–¸ì–´ ì„¤ì¹˜ (Install Go Language)
 
 [https://golang.org/](https://golang.org/)
 
-### Go ¼³Ä¡ ÈÄ go tour ½ÃÀÛ ÄÚµå (After installing, go tour code)
+### Go ì„¤ì¹˜ í›„ go tour ì‹œì‘ ì½”ë“œ (After installing, go tour code)
 
 ```bash
 % go get code.google.com/p/go-tour/gotour
 ```
 
-## ÆĞÅ°Áö (Packages) 
+## íŒ¨í‚¤ì§€ (Packages) 
 
 ```go
 package main
@@ -43,12 +43,12 @@ func main() {
 
 ```
 
-- ¸ğµç Go ÇÁ·Î±×·¥Àº ÆĞÅ°Áö·Î ±¸¼º (Every Go Program is made up of packages)
-- import () ÇüÅÂ·Î ÆĞÅ°Áö¸¦ ºÒ·¯¿É´Ï´Ù. ( imports packages with import() )
--  ÆĞÅ°Áö ÀÌ¸§Àº µğ·ºÅä¸® °æ·ÎÀÇ ¸¶Áö¸· ÀÌ¸§À» »ç¿ëÇÏ´Â °ÍÀÌ ±ÔÄ¢! (the package name is the same as the last element of the import path!)
+- ëª¨ë“  Go í”„ë¡œê·¸ë¨ì€ íŒ¨í‚¤ì§€ë¡œ êµ¬ì„± (Every Go Program is made up of packages)
+- import () í˜•íƒœë¡œ íŒ¨í‚¤ì§€ë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤. ( imports packages with import() )
+-  íŒ¨í‚¤ì§€ ì´ë¦„ì€ ë””ë ‰í† ë¦¬ ê²½ë¡œì˜ ë§ˆì§€ë§‰ ì´ë¦„ì„ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ê·œì¹™! (the package name is the same as the last element of the import path!)
 - import ("math/rand") => rand.func()
  
-## ºÒ·¯¿À±â (import)
+## ë¶ˆëŸ¬ì˜¤ê¸° (import)
 
 ```go
 package main
@@ -63,18 +63,18 @@ func main() {
 }
 ```
 
-- ÆĞÅ°Áö¸¦ ºÒ·¯¿Ã ¶§ ¼Ò°ıÈ£·Î °¨½Î¼­ Ç¥Çö (groups the imports into a parenthesized, "factored" import statement)
-- ¿©·¯¹ø import ±¸¹® »ç¿ë °¡´É (multiple import statements) 
+- íŒ¨í‚¤ì§€ë¥¼ ë¶ˆëŸ¬ì˜¬ ë•Œ ì†Œê´„í˜¸ë¡œ ê°ì‹¸ì„œ í‘œí˜„ (groups the imports into a parenthesized, "factored" import statement)
+- ì—¬ëŸ¬ë²ˆ import êµ¬ë¬¸ ì‚¬ìš© ê°€ëŠ¥ (multiple import statements) 
 
 ```go
 import "fmt"
 import "math"
 ```
 
-## ³»º¸³»±â (Export)
+## ë‚´ë³´ë‚´ê¸° (Export)
 
-- ÆĞÅ°Áö¸¦ import ÇÏ¸é ¿ÜºÎ·Î export ÇÑ °Íµé¿¡ Á¢±ÙÇÒ ¼ö ÀÖ½À´Ï´Ù. (When importing a package, you can refer only to its exported name.)
-- Go ¿¡¼­´Â Ã¹ ¹®ÀÚ°¡ ´ë¹®ÀÚ·Î ½ÃÀÛÇÏ¸é ±× ÆĞÅ°Áö¸¦ »ç¿ëÇÏ´Â °÷¿¡¼­ Á¢±ÙÇÒ ¼ö ÀÖ´Âexported nameÀÌ  µË´Ï´Ù. (In Go, a name is exported if it begins with a capital letter.)
+- íŒ¨í‚¤ì§€ë¥¼ import í•˜ë©´ ì™¸ë¶€ë¡œ export í•œ ê²ƒë“¤ì— ì ‘ê·¼í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. (When importing a package, you can refer only to its exported name.)
+- Go ì—ì„œëŠ” ì²« ë¬¸ìê°€ ëŒ€ë¬¸ìë¡œ ì‹œì‘í•˜ë©´ ê·¸ íŒ¨í‚¤ì§€ë¥¼ ì‚¬ìš©í•˜ëŠ” ê³³ì—ì„œ ì ‘ê·¼í•  ìˆ˜ ìˆëŠ”exported nameì´  ë©ë‹ˆë‹¤. (In Go, a name is exported if it begins with a capital letter.)
 
 ```go
 package main
@@ -90,9 +90,9 @@ func main() {
 }
 ```
 
-## ÇÔ¼ö (Function)
+## í•¨ìˆ˜ (Function)
 
-- ÇÔ¼ö´Â ¸Å°³º¯¼ö¸¦ °¡Áú ¼ö ÀÖ½À´Ï´Ù. (A function can take zero or more arguments.)
+- í•¨ìˆ˜ëŠ” ë§¤ê°œë³€ìˆ˜ë¥¼ ê°€ì§ˆ ìˆ˜ ìˆìŠµë‹ˆë‹¤. (A function can take zero or more arguments.)
 
 ```go
 package main
@@ -108,9 +108,9 @@ func main() {
 }
 ```
 
-- ¸Å°³º¯¼ö Å¸ÀÔÀº º¯¼ö¸í µÚ¿¡ ¸í½ÃÇÕ´Ï´Ù. (Notice that the type comes after the variable name)
+- ë§¤ê°œë³€ìˆ˜ íƒ€ì…ì€ ë³€ìˆ˜ëª… ë’¤ì— ëª…ì‹œí•©ë‹ˆë‹¤. (Notice that the type comes after the variable name)
 
-- µÎ °³ ÀÌ»óÀÇ ¸Å°³º¯¼ö°¡ °°Àº Å¸ÀÔÀ» ¾´´Ù¸é ¸¶Áö¸·¿¡ ÇÑ ¹ø ¸í½ÃÇÕ´Ï´Ù. (When two or more consecutive named function parameters share a type, you can omit the type from all but the last.)
+- ë‘ ê°œ ì´ìƒì˜ ë§¤ê°œë³€ìˆ˜ê°€ ê°™ì€ íƒ€ì…ì„ ì“´ë‹¤ë©´ ë§ˆì§€ë§‰ì— í•œ ë²ˆ ëª…ì‹œí•©ë‹ˆë‹¤. (When two or more consecutive named function parameters share a type, you can omit the type from all but the last.)
 
 ```go
 func add(x, y int) int {
@@ -118,7 +118,7 @@ func add(x, y int) int {
 }
 ```
 
-## ¿©·¯ °³ÀÇ °á°ú (Multiple results)
+## ì—¬ëŸ¬ ê°œì˜ ê²°ê³¼ (Multiple results)
 
 ```go
 package main
@@ -135,6 +135,6 @@ func main() {
 }
 ```
 
-- ÇÏ³ªÀÇ ÇÔ¼ö´Â ¿©·¯ °³ÀÇ °á°ú¸¦ ¹İÈ¯ÇÒ ¼ö ÀÖ½À´Ï´Ù. (A function can return any number of results.)
+- í•˜ë‚˜ì˜ í•¨ìˆ˜ëŠ” ì—¬ëŸ¬ ê°œì˜ ê²°ê³¼ë¥¼ ë°˜í™˜í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. (A function can return any number of results.)
 
-## ÀÌ¸§ÀÌ Á¤ÇØÁø °á°ú (Named Results)
+## ì´ë¦„ì´ ì •í•´ì§„ ê²°ê³¼ (Named Results)
