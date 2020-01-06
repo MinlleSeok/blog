@@ -2,7 +2,7 @@ baseURL = "https://minlleseok.github.io/"
 languageCode = "en-us"
 title = "Happiness Development"
 googleAnalytics = "UA-154649876-1"
-theme = "github-style"
+theme = "wiki"
 
 [params]
   author = "Jose Seok"
