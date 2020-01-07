@@ -123,7 +123,7 @@ git commit -m "$msg"
 git push origin master
 ```
 
-- 편리한 배포 쉘 스크립트 제공
+- 편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 ```bash chmod +x deploy.sh```)
 - [github-ID]/[blog].git : Hugo 전체 파일 관리 저장소
 - [github-ID]/[user-name].github.io.git : Hugo 빌드한 정적 페이지(/public) 관리 저장소
 - [github-ID]/[theme-name].git (Forked) : 테마 Fork하여 관리하는 저장소
