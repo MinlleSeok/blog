@@ -88,10 +88,10 @@ hugo -D
 1. github 에서 [blog] 저장소 만들기
 2. [user-name].github.io 저장소 만들기
 3. Hugo 전체 파일 관리 (2 중 택 1)
-   1. ```bash git clone [blog.git] && cd [blog]```
-   2. ```bash git init && git remote add origin [blog.git]```
+   1. ```git clone [blog.git] && cd [blog]```
+   2. ```git init && git remote add origin [blog.git]```
 4. git [~.io] 저장소 submodule 등록  
-    ```bash git submodule add -b master git@github.com:[github-ID]/[user-name].github.io.git public```
+    ```git submodule add -b master git@github.com:[github-ID]/[user-name].github.io.git public```
 
 :: /deploy.sh
 
@@ -123,7 +123,7 @@ git commit -m "$msg"
 git push origin master
 ```
 
-- 편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 ```bash chmod +x deploy.sh```)
+- 편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 ```chmod +x deploy.sh```)
 - [github-ID]/[blog].git : Hugo 전체 파일 관리 저장소
 - [github-ID]/[user-name].github.io.git : Hugo 빌드한 정적 페이지(/public) 관리 저장소
 - [github-ID]/[theme-name].git (Forked) : 테마 Fork하여 관리하는 저장소
