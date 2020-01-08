@@ -1,11 +1,12 @@
 ---
-title: "First"
+title: "고로 작성해봐요 - Write in Go"
 date: 2019-12-30T22:27:58+09:00
+modified: 2020-01-08T16:03:00+09:00
 ---
 
 # Go 언어 배우기 (Write in "Go")
 
-### 안녕, 고 (Hello, Go)
+## 안녕, 고 (Hello, Go)
 
 ```go
 package main
@@ -27,7 +28,7 @@ func main() {
 % go get code.google.com/p/go-tour/gotour
 ```
 
-## 패키지 (Packages) 
+## 패키지 (Packages)
 
 ```go
 package main
@@ -45,9 +46,9 @@ func main() {
 
 - 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages)
 - import () 형태로 패키지를 불러옵니다. ( imports packages with import() )
--  패키지 이름은 디렉토리 경로의 마지막 이름을 사용하는 것이 규칙! (the package name is the same as the last element of the import path!)
+- 패키지 이름은 디렉토리 경로의 마지막 이름을 사용하는 것이 규칙! (the package name is the same as the last element of the import path!)
 - import ("math/rand") => rand.func()
- 
+
 ## 불러오기 (import)
 
 ```go
@@ -137,4 +138,8 @@ func main() {
 
 - 하나의 함수는 여러 개의 결과를 반환할 수 있습니다. (A function can return any number of results.)
 
-## 이름이 정해진 결과 (Named Results)
+<!-- ## 이름이 정해진 결과 (Named Results) -->
+
+---
+
+$$행복 코딩

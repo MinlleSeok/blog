@@ -1,11 +1,12 @@
 ---
 title: "Design Recursion"
 date: 2020-01-01T15:54:01+09:00
+modified: 2020-01-08T16:03:00+09:00
 ---
 
-[ Reference ] : <https://youtu.be/Vwfo_hrxuzg>
-
 # Design Recursion
+
+[ Reference ] : <https://youtu.be/Vwfo_hrxuzg>
 
 - Recursion을 어떻게 짜야할까?
 
@@ -127,7 +128,7 @@ int findMax(int [] data, int begin, int end) {
 - 데이터가 크기 순으로 정렬되어 배열에 저장되어 있을 때 적용할 수 있는 검색 방법
 
 ```java
-public static int binarySearch(String[] items, String target, int begin, int end) {
+public static int binarySearch(String [] items, String target, int begin, int end) {
     if (begin > end)
         return -1;
     else {
@@ -144,6 +145,8 @@ public static int binarySearch(String[] items, String target, int begin, int end
 ```
 
 - 모든 매개변수를 명시화해야 합니당.
+
+### javascript로 코드 작성해보기
 
 ```js
 const binarySearchPrint = (items, target, begin, end) => {
