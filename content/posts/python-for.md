@@ -4,7 +4,7 @@ date: 2020-01-01T17:51:58+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# python for in 문법
+# Python - for in 문법
 
 Reference : <https://youtu.be/0wpYyDlAEIg>
 
@@ -31,4 +31,4 @@ for letter in "Nicolas":
 
 ---
 
-<p style="text-align: center">행복 코딩</p>
+> 행복 코딩

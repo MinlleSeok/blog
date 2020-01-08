@@ -4,7 +4,7 @@ date: 2020-01-01T17:22:01+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# 선형대수학 Linear Algebra
+# 선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)
 
 [ Reference ] : https://youtu.be/br7tS1t2SFE
 

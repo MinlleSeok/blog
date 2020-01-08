@@ -1,12 +1,10 @@
 ---
-title: "타입스크립트 기초 - TypeScript basic"
+title: "타입스크립트 기초 - TypeScript Basic"
 date: 2019-12-18T21:34:00+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# 타입스크립트 기초 - TypeScript basic
-
-## Typescript 부터 출발합니다
+# 타입스크립트 기초 - TypeScript Basic
 
 [Reference] : <https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html>
 
@@ -156,4 +154,4 @@ document.body.textContent = greeter(user);
 
 ---
 
-<p style="text-align: center">행복 코딩</p>
+> 행복 타입

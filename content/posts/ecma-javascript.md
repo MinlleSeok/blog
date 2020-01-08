@@ -1,10 +1,10 @@
 ---
-title: "Javascript? ECMAScript? View Template Engine?"
+title: "Javascript와 ECMAScript - 알아보기"
 date: 2020-01-06T23:50:45+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# 궁금이
+# Javascript와 ECMAScript - 알아보기
 
 ## ECMAScript 와 JavaScript
 
@@ -36,7 +36,7 @@ function updateName() {
 - 자바스크립트(Netscape)와 JScript(Microsoft)를 원천 기술로 기반합니다.
 - 자바스크립트의 언어 명세 표준화 작업이라고 볼 수 있습니다.
 
-#### ES6(ECMAScript2015)
+#### ES6(ECMAScript2015) 추가 사항
 
 - 모듈(modules)
 - 클래스 선언(class declarations)
@@ -50,4 +50,4 @@ function updateName() {
 
 ---
 
-> 행복 코딩
+> 행복 스크립팅

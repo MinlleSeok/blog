@@ -4,7 +4,7 @@ date: 2019-12-23T21:24:34+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# Python 가상환경 관리 pyenv 설치
+# Python 가상환경 - pyenv 설치
 
 > mac 기준, Homebrew를 사용해서 설치합니다.
 
@@ -33,4 +33,4 @@ modified: 2020-01-08T16:03:00+09:00
 
 ---
 
-<p style="text-align: center">행복 코딩</p>
+> 행복 개발

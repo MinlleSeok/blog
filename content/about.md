@@ -10,11 +10,11 @@ const Introduce = () => {
 	return {
 		name: "Jose Seok",
 		job: "Front-end Developer",
-		focus: "React"
+		focus: ["ECMAScript", "React.js", "Node.js", "Algorithm"]
 	};
 }
 ```
 
 ---
 
-<p style="text-align: center">행복 코딩</p>
+> 행복 프로그래밍

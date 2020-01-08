@@ -1,10 +1,10 @@
 ---
-title: "Hugo로 개인 블로그 만들기 + submodule"
+title: "Hugo로 개인 블로그 만들기 + git submodule"
 date: 2019-12-30T22:37:32+09:00
 modified: 2020-01-07T20:03:00+09:00
 ---
 
-# Hugo Blog
+# Hugo로 개인 블로그 만들기 + git submodule
 
 > <https://gohugo.io/>
 

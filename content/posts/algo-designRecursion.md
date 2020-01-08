@@ -1,10 +1,10 @@
 ---
-title: "Design Recursion"
+title: "재귀 설계 - Design Recursion"
 date: 2020-01-01T15:54:01+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# Design Recursion
+# 재귀 설계 - Design Recursion
 
 [ Reference ] : <https://youtu.be/Vwfo_hrxuzg>
 
@@ -167,4 +167,4 @@ const binarySearchPrint = (items, target, begin, end) => {
 
 ---
 
-<p style="text-align: center">행복 코딩</p>
+> 행복 코딩

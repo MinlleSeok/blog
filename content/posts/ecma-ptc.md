@@ -1,9 +1,9 @@
 ---
-title: "ES6 - 적절한 꼬리 호출?(Proper Tail Calls)"
-date: 2020-01-08T23:50:45+09:00
+title: "ES6 - 적절한 꼬리 호출(Proper Tail Calls)"
+date: 2020-01-08T18:46:45+09:00
 ---
 
-# ECMAScript 6 - 적절한 꼬리 호출?(Proper Tail Calls)
+# ECMAScript 6 - 적절한 꼬리 호출(Proper Tail Calls)
 
 <https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/>
 
@@ -29,8 +29,13 @@ date: 2020-01-08T23:50:45+09:00
 ### 결론: 재귀 호출시 PTC를 쓰면 성능 향상을 많이 누릴 수 있다
 
 ```js
-// 유클리드의 최대공약수 (Greatest Common Divisor of Euclid's algorithm)
+/*
+ * 유클리드의 최대공약수 (Greatest Common Divisor of Euclid's algorithm)
+ * 아름답고 적절한 꼬리 호출의 예제 입니다.
+ */
+
 "use strict";
+
 function gcd(m, n)
 {
     console.log(`m=${m} n=${n}`)
@@ -41,8 +46,15 @@ function gcd(m, n)
 ```
 
 ```js
-// factorial() 기본 모습
+/*
+ * factorial() 기본 형태
+ * 마지막 return 호출 시에
+ * n * 연산("return n * factorial(n - 1)")이 있으므로
+ * 적합한 꼬리 호출이 성립하지 않습니다!
+ */
+
 "use strict";
+
 function factorial(n)
 {
     console.log(n)
@@ -53,9 +65,14 @@ function factorial(n)
 ```
 
 ```js
-// factorial()을 PTC화
-// 꼬리 호출에 자기 자신 호출이 쏘옥 들어가야 합니다.
+/* factorial()을 PTC화
+ * 꼬리 호출에
+ * 자기 자신 호출("return factorial(n - 1, n * partialFactorial)")이
+ * 쏘옥 들어가야 합니다.
+ */
+
 "use strict";
+
 function factorial(n, partialFactorial = 1)
 {
     if (!n)
@@ -65,9 +82,17 @@ function factorial(n, partialFactorial = 1)
 ```
 
 ```js
-// 뉴턴의 반복 방법을 이용한 제곱근 구하기
-// (computing Square Root using Newton’s Iterative method)
+/*
+ * 뉴턴의 반복 방법을 이용한 제곱근 구하기
+ * 첫 번째 함수 computeSquareRoot()를 제외하고,
+ * ("return computePositiveSquareRoot(x).toString() + imaginaryPart"
+ * 함수 호출 외의 연산이 포함되어 있으므로 적합한 꼬리 호출이 성립되지 않습니다)
+ * 나머지 두 함수(computePositiveSquareRoot(), iterativeSquareRoot())는 꼬리 호출을 사용합니다.
+ * (computing Square Root using Newton’s Iterative method)
+ */
+
 "use strict";
+
 function computeSquareRoot(x)
 {
     if (!x)
@@ -101,8 +126,9 @@ function iterativeSquareRoot(x, estimate, targetEpsilon)
 ```
 
 ```js
-// functional programming
-// 함수형 프로그래밍 using PTC
+// PTC를 이용하는 함수형 프로그래밍
+// functional programming using PTC
+
 "use strict";
 
 function newList(count)

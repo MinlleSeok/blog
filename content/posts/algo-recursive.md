@@ -1,10 +1,10 @@
 ---
-title: "Recursive"
+title: "재귀적 생각 - Recursive Thinking"
 date: 2019-12-22T23:50:01+09:00
 modified: 2020-01-08T16:03:00+09:00
 ---
 
-# Recursive Thinking
+# 재귀적 생각 - Recursive Thinking
 
 [ Reference ] : https://youtu.be/tuzf1yLPgRI
 
