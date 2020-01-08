@@ -33,4 +33,4 @@ modified: 2020-01-08T16:03:00+09:00
 
 ---
 
-$$행복 코딩
+<p style="text-align: center">행복 코딩</p>

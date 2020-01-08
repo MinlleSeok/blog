@@ -123,4 +123,4 @@ public void readFrom(int n, int [] data, Scanner in) {
 
 ---
 
-$$행복 코딩
+<p style="text-align: center">행복 코딩</p>

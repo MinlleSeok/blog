@@ -37,4 +37,4 @@ categories: ["database"]
 
 ---
 
-$$행복코딩
+<p style="text-align: center">행복 코딩</p>

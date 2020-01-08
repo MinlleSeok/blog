@@ -156,4 +156,4 @@ document.body.textContent = greeter(user);
 
 ---
 
-$$행복 코딩
+<p style="text-align: center">행복 코딩</p>

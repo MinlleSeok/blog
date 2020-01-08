@@ -14,3 +14,7 @@ const Introduce = () => {
 	};
 }
 ```
+
+---
+
+<p style="text-align: center">행복 코딩</p>

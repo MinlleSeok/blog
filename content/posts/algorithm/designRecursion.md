@@ -164,3 +164,7 @@ const binarySearchPrint = (items, target, begin, end) => {
     }
 }
 ```
+
+---
+
+<p style="text-align: center">행복 코딩</p>

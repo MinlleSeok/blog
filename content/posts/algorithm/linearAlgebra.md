@@ -52,3 +52,7 @@ c = [i(허수) 0 1]
 ```
 
 - R^n : n - dimensional real coordinate space
+
+---
+
+<p style="text-align: center">행복 코딩</p>
