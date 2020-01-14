@@ -1,14 +1,14 @@
 ---
-title: "Counting Cells in a Blob"
+title: "블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob"
 date: 2020-01-11T13:42:06+09:00
 ---
 
-# Counting Cells in a Blob
+# 블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob
 
 [ Reference ] : <https://youtu.be/HHJFlVT1tBw>
 
 - Binary 이미지
-- 각 픽셀은 background pixel이거나      image pixel 
+- 각 픽셀은 background pixel이거나      image pixel
 - Blob - 서로 연결된 image pixel들의    집합을 blob이라고 부름
 - 상하좌우 및 대각방향으로도 연결된      것으로 간주
 
@@ -17,7 +17,7 @@ date: 2020-01-11T13:42:06+09:00
 - N x N 크기의 2차원 그리드(grid)
 - 하나의 좌표 (x, y)
 
-출력 : 
+출력 :
 
 - 픽셀 (x, y)가 포함된 blob의 크기
 - (x, y)가 어떤 blob에도 속하지 않는 경우에는 0
@@ -63,7 +63,7 @@ date: 2020-01-11T13:42:06+09:00
 
 ### 3
 
-- 인접한 8개의 픽셀 각각에 대해서 순서대로 그 픽셀이 포함된 blob의 크기를         count한다.
+- 인접한 8개의 픽셀 각각에 대해서 순서대로 그 픽셀이 포함된 blob의 크기를 count한다.
 - 북, 북동, 동, 동남, ... 이런 순서로 고려한다.
 
 - 북쪽 픽셀이 포함된 blob의 크기는 0이다.

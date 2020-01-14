@@ -1,9 +1,9 @@
 ---
-title: "정렬 - Sort"
+title: "정렬 알고리즘 - Sort Algorithm"
 date: 2020-01-14T11:13:38+09:00
 ---
 
-# 정렬 - Sort
+# 정렬 알고리즘 - Sort Algorithm
 
 [ Reference ] : <https://youtu.be/0dG7xTt5IfQ>
 
