@@ -576,3 +576,88 @@ A(n) = (2 / n) * (n-1 (sigma) i=0) * A(i) + O(n) = O(nlog(2)n)
 - 피봇을 랜덤하게 선택
 - no worst case instance(최악 입력 X), but worst case execution(최악 경우 O)
 - 평균 시간복잡도 O(NlogN)
+
+## 힙 정렬 - Heap Sort
+
+- 힙, 바이너리 힙
+- 이진 힙 자료구조 정렬
+- 최악의 경우 시간복잡도 O(nlog(2)n)
+- Sorts in place - 추가 배열 불필요
+- 이진 힙(binary heap) 자료구조를 사용
+
+### Heap의 정의
+
+- complete binary tree이면서,
+- heap property 만족
+
+### Full vs Complete Binary Trees
+
+- full binary tree: 모든 레벨에 노드들이 꽉 차있는 형태
+- complete binary tree: 마지막 레벨을 제외하면 완전히 꽉 차있고,  마지막 레벨에는 가장 오른쪽 부터 연속된 몇 개의 노드가 비어있을 수 있음
+- tree: 계층적 관계
+- 부모 노드 (parent node)
+- 자식 노드 (child node)
+- 부모 없는 노드: 루트 노드 (root node)
+- 자식 없는 노드: 리프 노드 (leaf node)
+
+- 이진 트리 (Binary Tree)
+- : 각 노드가 최대 2개의 자식 노드를 가지는 트리
+
+Full Binary Tree > Complete Binary Tree
+
+## Heap의 정의
+
+- Max Heap Property : 부모는 자식보다 크거나 같습니다.
+- Min Heap Property : 부모는 자식보다 작거나 같습니다.
+
+Max Heap
+Height = O(log(2)n)
+
+## Heap
+
+```t
+Heap O
+15 - 6
+10 - 8, 7 - 2,3 | 6
+21 - 10, 12
+
+Heap X
+6 - 15
+10 - 2, 7 - 8, 3 | 6
+12 - 10, 21
+
+자식 노드가 왼쪽이 없고 오른쪽만 있어도 Heap X
+```
+
+## Heaps
+
+- 동일한 데이터를 가진 서로 다른 힙이 있을 수 있습니다.
+- 즉, 힙의 모양은 유일하지 않습니다.
+
+## Heap의 표현
+
+- 힙은 일차원 배열로 표현 가능: A[1...n]
+- 루트 노드 A[1]
+- A[i]의 부모 = A[i/2]
+- A[i]의 왼쪽 자식 = A[2i]
+- A[i]의 오른쪽 자식 = A[2i + 1]
+
+루트			1
+레벨		2		3
+레벨	  4	  5	  6   7
+레벨	8 9	10
+
+## 기본 연산 : MAX - HEAPIFY
+
+- 전체를 힙으로 만들어라
+- 트리의 전체 모양은 complete binary tree임
+- 왼쪽 부트리(subtree)는 그 자체로 heap이고
+- 오른쪽 부트리(subtree)는 그 자체로 heap일 때
+- 유일하게 루트만이 heap property를 만족 안함
+
+- 두 자식들 중 더 큰 쪽이 나보다 크면 exchange 합니다.
+- exchange안 한 부트리는 heap이 되기 위한 모든 조건이 충족
+- exchange한 부트리는 heap property를 다시 만족시켜야 합니다.
+
+### MAX-HEAPIFY Recursion
+
