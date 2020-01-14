@@ -3,15 +3,60 @@ title: "Algo Series"
 date: 2020-01-13T16:00:50+09:00
 draft: true
 ---
+
+- 종이접기 algorithm javascript
+
+```js
+function old_solution(n) {
+    let result = [0];
+    
+    
+    for (let i=0; i<n-1; i++) {
+        let list = [];    
+        
+        for (let j=0; j<result.length; j++) {
+            
+            if (j%2 === 0) {
+                list.push(0);
+                list.push(result[j]);
+                list.push([1]); 
+            } else {
+                list.push(result[j]);
+            }
+        }
+        result = list;
+    }
+    return result;
+}
+function reverseString(num) {
+    return num.toString().split("").reverse().join("");
+}
+
+function flipbits(str) {
+    const result = str.split('').map(function (b) {
+        return (1 - b).toString();
+      }).join('');
+      print("flip result=", result)
+    return result;
+}
+    
+function solution(n) {
+    let result = [0];
+    for (let i=0; i<n-1; i++) {
+        result.push([0]);
+        result.push(flipbits(reverseString(result[0])));
+        result = [result.map(function (a) { return a.toString()}).join('')];
+    }
+    return result;
+}
+
+print(old_solution(4));
+print(solution(4));
+```
+
+- Quick sort algorithm - java
+
 ```java
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 import java.util.*;
 
 public class Main
@@ -142,6 +187,8 @@ public class Main
 
 ```
 
+- 이미지 blobs algorithm(Recursion) - java
+
 ```java
 public static int getEqualSpaceCount(boolean[][] visited, int[][] picture, int value, int i, int j) {
         if (i < 0 || i >= picture.length || j < 0 || j >= picture[0].length || visited[i][j] == true || value != picture[i][j]) {
@@ -171,6 +218,8 @@ public static int getEqualSpaceCount(boolean[][] visited, int[][] picture, int v
         return answer;
     }
 ```
+
+- 이미지 blobs algorithm(Stack) - java
 
 ```java
 public static void plus(Stack stackX, Stack stackY, boolean[][] visited, int j, int i) {
@@ -229,6 +278,8 @@ public static void plus(Stack stackX, Stack stackY, boolean[][] visited, int j, 
         return answer;
     }
 ```
+
+- minimum algorithm - java 
 
 ```java
 class Solution {
@@ -290,6 +341,8 @@ class Solution {
 }
 ```
 
+- dfs algorithm - java
+
 ```java
 class Solution {
     public int solution(int[] numbers, int target) {
@@ -310,6 +363,8 @@ class Solution {
 }
 
 ```
+
+- budget minimum average algorithm - java
 
 ```java
 import java.util.*;
@@ -345,6 +400,8 @@ public class Main
 	}
 }
 ```
+
+- budget minimum average algorithm - java
 
 ```java
 class Solution {

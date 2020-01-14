@@ -1,9 +1,11 @@
 ---
-title: "Maze"
+title: "미로찾기 알고리즘 - Maze Algorithm"
 date: 2020-01-10T22:06:14+09:00
 ---
 
-# 미로찾기 - Recursive Thinking
+# 미로찾기 알고리즘 - Maze Algorithm
+
+Recursive Thinking
 
 현재 위치에서 출구까지 가는 경로가 있으려면
 

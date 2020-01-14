@@ -1,9 +1,9 @@
 ---
-title: "N-Queens Problem"
+title: "알고리즘 - N-Queens Problem"
 date: 2020-01-11T14:24:45+09:00
 ---
 
-# N-Queens Problem
+# 알고리즘 - N-Queens Problem
 
 - N x N 체스 보드
 - N = 8
