@@ -146,3 +146,146 @@ MAX-HEAPIFY(A, i)
 - Complete binary tree
 - 노드 수 : n
 - h = O(logn)
+
+## 정렬할 배열을 힙으로 만들기
+
+```r
+BUILD-MAX-HEAP(A)
+	heap-size[A] <- length[A]		// 힙의 저장된 노드의 개수 <- 정렬할 데이터의 개수
+	for i <- (length[A]/2) downto 1
+		do MAX-HEAPIFY(A, i)
+```
+
+- 일차원 배열  A [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
+- 힙으로 변환
+- [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
+
+### 힙 정렬 만드는 함수 시간 복잡도
+
+- 힙을 만드는데 시간복잡도 : O(n)
+- 시작할 노드의 인덱스 : i / 2
+- for 문 : n / 2
+- MAX-HEAPIFY(A, i) = logn
+- O(nlogn) -> 많이 넉넉하게 잡았다 -> O(n)
+- 전체 힙 정렬 알고리즘 시간복잡도 : O(nlogn)
+
+## 힙 정렬 실행 - Heap Sort
+
+- 주어진 배열을 힙으로 만듭니다.
+- 부모는 자식보다 큽니다. 데이터의 최대값은 항상 루트 인덱스 1번입니다.
+- 힙에서 최대값(루트)을 가장 마지막 값과 자리를 바꿉니다. (정렬했을 때 최대값 위치로 보냅니다)
+- 힙의 크기가 1 줄어든 것으로 간주합니다. 즉, 가장 마지막 값은 힙의 일부가 아닌 것으로 간주합니다.
+- 루트 노드에 대해서 Heapify()를 합니다.
+- 2 ~ 4 번을 반복합니다.
+
+```r
+HEAPSORT(A)
+	BUILD-MAX-HEAP(A)					// O(n)
+	for i <- heap_size downto 2 do		// n-1 times
+		exchange A[1] <-> A[i]			// O(1)
+		heap_size <- heap_size - 1		// O(1)
+		MAX-HEAPIFY(A, 1)				// O(log(2)n)
+```
+
+- Total time : O(nlog(2)n)
+
+## 힙의 응용 : 우선순위 큐
+
+- 이진 힙은 힙 정렬 이외에도 중요한 용도를 가집니다.
+- 큐 : 선입선출(FIFO) QUEUE
+- 최대 우선순위 큐(maximum priority queue)는 다음의 두 가지 연산을 지원하는 자료구조
+- INSERT(x) : 새로운 원소 x를 삽입
+- EXTRACT_MAX() : 최대값을 삭제하고 반환
+- 최소 우선순위 큐(minimum priority queue)는 EXTRACT-MAX대신 EXTRACT-MIN을 지원하는 자료구조
+- MAX HEAP(= 일차원 배열)을 이용하여 최대 우선순위 큐를 구현
+
+### INSERT
+
+- Complete Binary Tree 이어야 합니다.
+- Max Heap Property(부모는 자식보다 큽니다)
+
+```r
+MAX-HEAP-INSERT(A, key) {
+	heap_size = heap_size + 1;					// 배열의 길이를 + 1
+	A[heap_size] = key;							// insert
+	i = heap_size;								// 문제 노드 인덱스
+	while (i > 1 and A[PARENT(i)] < A[i]) {		// 루트 노드가 아니고, 부모 노드값보다 큰 동안
+		exchange A[i] and A[PARENT(i)];			// 문제 노드와 부모 노드 교체
+		i = PARENT(i);							// 문제 노드 <= 부모 노드
+	}
+}
+```
+
+- O(h), h = 높이
+- 시간복잡도 O(log(2)n)
+
+### EXTRACT_MAX()
+
+- 최대값을 삭제하고 반환해주는 연산
+- Max Heap 최대값은 항상 루트에 존재합니다.
+- 노드 개수 - 1
+- 새로운 부모 지정
+- 마지막 노드와 루트 노드를 교체하고, Heapify를 합니다.
+
+```r
+HEAP-EXTRACT-MAX(A)
+	if heap-size[A] < 1
+		then error "heap underflow"
+	max <- A[1]
+	A[1] <- A[heap-size[A]]
+	heap-size[A] <- heap-size[A] - 1
+	MAX-HEAPIFY(A, 1)
+	return max
+```
+
+- 시간복잡도 O(log(2)n)
+
+## 정렬 알고리즘 비교 - Comparison Sort
+
+- 최악의 경우 O(n^2)
+  - bubble
+  - selection
+  - insertion
+  - quicksort (average. O(nlogn))
+- 최악의 경우 O(nlogn)
+  - merge
+  - heap
+- O(nlogn) 보다 더 좋을 수 없을까? X
+- 정렬 알고리즘이 Comparison Sort인 경우에!
+
+## 정렬 알고리즘의 유형
+
+- Comparison Sort
+  - 데이터들간의 상대적 크기관계만을 이용해서 정렬하는 알고리즘
+  - 따라서 데이터들간의 크기 관계가 정의되어 있으면 어떤 데이터에든 적용가능(문자열, 알파벳, 사용자 정의 객체 등)
+  - 버블정렬, 삽입정렬, 합병정렬, 퀵정렬, 힙정렬 등
+- Non-comparison Sort
+  - 정렬할 데이터에 대한 사전지식을 이용 - 적용에 제한
+  - Bucket Sort
+  - Radix Sort
+- 시험성적을 정렬한다고 하면, 일반적으로 정렬하기 전에 분류를 먼저 합니다.
+- 90점대, 80점대, 70점대 ... 정렬할 데이터가 2자리 정수라는 사실을 알고있기 때문입니다.
+- 정렬할 데이터를 먼저 분류하는 정렬 => Bucket Sort
+- Radix Sort ?
+
+## 정렬 문제의 하한
+
+> Comparison Sort 결론 : 어떤 Comparison Sort 도 O(nlogn) 보다 더 빠를 수 없습니다.
+
+- 하한 (Lower Bound)
+  - 입력된 데이터를 한번씩 다 보기위해서 최소 O(n)의 시간복잡도 필요 (trivial lower bound)
+  - 합병정렬과 힙정렬 알고리즘들의 시간복잡도는 O(nlog(2)n)
+  - 어떤 comparison sort 알고리즘도 O(nlog(2)n)보다 나을 수 없습니다.
+
+## Decision Tree
+
+- Abstraction of any comparison sort
+
+3개의 값을 정렬하는 삽입정렬 알고리즘에 대한 decision tree
+
+```r
+		<=	  1:2  >
+		2:3			1:3
+ <1,2,3> 1:3   	<2,1,3> 2:3
+  <1,3,2> <3,1,2>   <2,3,1> <3,2,1>
+```
