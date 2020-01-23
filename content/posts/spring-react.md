@@ -1,5 +1,5 @@
 ---
-title: "Spring boot와 React.js의 만남"
+title: "Spring boot와 React.js의 만남 - 백엔드"
 date: 2020-01-22T18:06:35+09:00
 ---
 
