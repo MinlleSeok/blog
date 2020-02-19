@@ -189,3 +189,4 @@ FIND-SET-PC(x)
 - O(|E|log(2)|E|)
 - 에지들을 weight순으로 정렬할 때 가장 많이 걸립니다.
 - O(mlogm) = O(nlogn)
+- O(mlogn^2) = O(mlogn)
