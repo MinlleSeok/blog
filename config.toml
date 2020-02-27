@@ -12,3 +12,6 @@ theme = "github-style"
   utterances = "MinlleSeok/minlleseok.github.io"
   avatar = "https://mj-seok.com/images/avatar.png"
   url = "https://mj-seok.com"
+  
+[taxonomies]
+  category = "categories"
