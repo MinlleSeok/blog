@@ -79,3 +79,118 @@ private void preOrderTraverse(Run node, int depth) {
     }
 }
 ```
+
+## Codeword 부여하기
+
+- Huffman 트리의 리프 노드에 위치한 run들에게 이진 codeword를 부여할 차례입니다.
+
+```java
+assignCodeword(prefix, node)
+if node is a leaf
+    assign prefix to the node;
+else
+    assignCodeword(prefix + `0`, node.left);
+    assignCodeword(prefix + `1`, node.right);
+```
+
+- 임의의 길이의 이진수열
+- 여기서 prefix를 하나의 32비트 정수로 표현합니다.
+- 하지만 32비트 중에서 하위 몇 비트만이 실제 부여된 codeword입니다.
+- 따라서 codeword의 길이를 따로 유지해야 합니다.
+
+```java
+class Run implements Comparable<Run> {
+    public byte symbol;
+    public int runLen;
+    public int freq;
+
+    /* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다. */
+    
+    /* 노드에 부여된 codeword를 저장하기 위한 필드들을 다음과 같이 추가합니다. */
+    public int codeword;    /* 부여된 codeword를 32비트 정수로 저장 */
+    public int codewordLen; /* 부여된 codeword의 길이. 즉 codeword의 하위 codewordLen비트가 실제 codeword */
+}
+```
+
+## Java에서의 비트(bit) 연산
+
+```java
+public class Test {
+    public static void main(String args[]) {
+        int a = 60; /* 60 = 0011 1100 */
+        int b = 13; /* 13 = 0000 1101 */
+        int c = 0;
+
+        c = a & b;  /* 12 = 0000 1100 */
+        System.out.println("a & b = " + c);
+
+        c = a | b;  /* 61 = 0011 1101 */
+        System.out.println("a | b = " + c);
+
+        c = a ^ b;  /* 49 = 0011 0001 */
+        System.out.println("a ^ b = " + c);
+
+        c = ~a;  /* -61 = 1100 0011 */
+        System.out.println("~a = " + c);
+
+        c = a << 1;  /* 120 = 0111 1000 */
+        System.out.println("a << 1 = " + c);
+
+        c = (a << 1) + 1;  /* 121 = 0111 1001 */
+        System.out.println("(a << 1) + 1 = " + c);
+
+        c = a << 2;  /* 240 = 1111 0000 */
+        System.out.println("a << 2 = " + c);
+    }
+}
+```
+
+## codeword 부여하기
+
+```java
+private void assignCodewords(Run p, int codeword, int length) {
+    // assignCodewords(theRoot, 0, 0) 으로 호출합니다.
+    // 노드 p에 부여된 codeword
+    // 노드 p에 부여된 codeword의 길이
+
+    if (p.left == null && p.right == null) {
+        // 리프노드일 때
+
+        p.codeword = codeword;
+        p.codewordLen = length;
+    }
+    else {
+        assignCodewords(    );
+        assignCodewords(    );
+        // 왼쪽 자식노드에게는 codeword의 뒤에 0을 추가하고
+        // 오른쪽 자식에게는 1을 추가합니다.
+        // 길이는 1 증가합니다.
+    }
+}
+```
+
+## main과 compressFile 메서드
+
+```java
+public class HuffmanCoding {
+    ...
+
+    public void compressFile(RandomAccessFile fIn) {
+        collectRuns(fIn);
+        createHuffmanTree();
+        assignCodewords(theRoot, 0, 0);
+    }
+
+    static public void main (String args[]) {
+        HuffmanCoding app = new HuffmanCoding();
+        RandomAccessFile fIn;
+        try {
+            fIn = new RandomAccessFile("sample.txt", "r");
+            app.compressFile(fIn);
+            fIn.close();
+        } catch (IOException io) {
+            System.err.println("Cannot open " + fileName);
+        }
+    }
+}
+```
