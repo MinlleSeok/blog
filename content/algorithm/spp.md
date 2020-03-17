@@ -1,6 +1,7 @@
 ---
 title: "최단경로 알고리즘 - Shortest Path Problem"
 date: 2020-02-28T12:32:26+09:00
+categories: ["algorithm"]
 ---
 
 # 최단경로

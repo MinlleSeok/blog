@@ -1,6 +1,7 @@
 ---
 title: "압축 알고리즘 - Compression"
 date: 2020-03-04T10:28:37+09:00
+categories: ["algorithm"]
 ---
 
 # 압축 알고리즘 - Compression

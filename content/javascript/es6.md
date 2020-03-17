@@ -1,6 +1,7 @@
 ---
 title: "ECMAScript 6 - var, let, const"
 date: 2020-03-13T12:40:07+09:00
+categories: ["javascript"]
 ---
 
 # ECMAScript 6 - var, let, const

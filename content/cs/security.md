@@ -1,6 +1,7 @@
 ---
 title: "컴퓨터 보안 - Computer Security"
 date: 2020-03-12T12:59:01+09:00
+categories: ["cs"]
 ---
 
 # 컴퓨터 보안 - Computer Security

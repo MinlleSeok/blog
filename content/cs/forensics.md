@@ -1,6 +1,7 @@
 ---
 title: "컴퓨터 포렌식 (Computer Forensics)"
 date: 2020-03-12T12:53:49+09:00
+categories: ["cs"]
 ---
 
 # 컴퓨터 포렌식 (Computer Forensics)

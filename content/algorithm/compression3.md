@@ -1,6 +1,7 @@
 ---
 title: "압축 알고리즘 - 제 3단계 Huffman Tree"
 date: 2020-03-12T18:12:12+09:00
+categories: ["algorithm"]
 ---
 
 # 압축 알고리즘 - 제 2단계 Huffman Tree

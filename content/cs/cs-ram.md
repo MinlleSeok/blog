@@ -1,6 +1,7 @@
 ---
 title: "레지스터와 RAM 과 중앙처리장치 CPU"
 date: 2020-03-02T15:59:54+09:00
+categories: ["cs"]
 ---
 
 # Arithmetic and Logic Unit(ALU)

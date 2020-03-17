@@ -1,6 +1,7 @@
 ---
 title: "컴파일러 - Compiler"
 date: 2020-03-02T15:45:15+09:00
+categories: ["cs"]
 ---
 
 # 컴파일러 과목

@@ -1,6 +1,7 @@
 ---
 title: "입출력 처리 방식 - I/O Process Method"
 date: 2020-03-12T13:07:06+09:00
+categories: ["cs"]
 ---
 
 # 입출력 처리 방식 - I/O Process Method

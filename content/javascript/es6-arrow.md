@@ -1,6 +1,7 @@
 ---
 title: "ECMAScript 6 - Arrow 함수"
 date: 2020-03-13T15:29:12+09:00
+categories: ["javascript"]
 ---
 
 # ECMAScript 6 - Arrow 함수

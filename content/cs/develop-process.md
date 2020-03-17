@@ -1,7 +1,7 @@
 ---
 title: "Develop Process"
 date: 2020-03-02T14:50:40+09:00
-draft: true
+categories: ["cs"]
 ---
 
 # 주요 개발 프로세스
